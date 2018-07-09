@@ -16,7 +16,7 @@ namespace MassText
         private string mailServer;
         private string recipient;
         private string emailer;
-        private string port;
+        private int port;
         private string security;
         private string message;
         private string subject;
@@ -45,20 +45,22 @@ namespace MassText
 
         private void btnSend_Click_1(object sender, EventArgs e)
         {
+
+            // create looping
             recipient = string.Concat(tempPhone, tempCarrier); //cboCarrier.SelectedItem.ToString());
             emailer = txtSender.Text;
             password = txtPassword.Text;
-            port = cboPort.Text;
+            port = int.Parse(cboPort.Text);
             security = txtSecurity.Text;
             subject = txtSubject.Text;
-            mailServer = txtMailServer.Text;
+            mailServer = cboMailServer.Text;
             message = txtMessage.Text;
 
             try
             {
                 SmtpClient SmtpServer = new SmtpClient();
                 SmtpServer.Credentials = new System.Net.NetworkCredential(emailer, password);
-                SmtpServer.Port = 25;
+                SmtpServer.Port = port;
                 SmtpServer.Host = mailServer;
                 SmtpServer.EnableSsl = true;
 
@@ -100,6 +102,17 @@ namespace MassText
         {
             var setting = new frmSettings();
             setting.ShowDialog();
+        }
+
+        private void createNewListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var newlist = new frmNewList();
+            newlist.ShowDialog();
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
