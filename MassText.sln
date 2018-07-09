@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassText", "MassText\MassText.csproj", "{B1A27ECB-E7A5-4069-BBF9-B20A392D4FF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A27ECB-E7A5-4069-BBF9-B20A392D4FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A27ECB-E7A5-4069-BBF9-B20A392D4FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A27ECB-E7A5-4069-BBF9-B20A392D4FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A27ECB-E7A5-4069-BBF9-B20A392D4FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F395AC89-92C1-4A4A-A763-8BAF0DA8FEB5}
+	EndGlobalSection
+EndGlobal
