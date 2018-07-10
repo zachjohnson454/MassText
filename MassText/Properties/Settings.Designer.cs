@@ -8,22 +8,50 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MassText.Properties
-{
-
-
+namespace MassText.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string rootFolder {
+            get {
+                return ((string)(this["rootFolder"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>@text.wireless.alltel.com</string>
+  <string>@txt.att.net</string>
+  <string>@myboostmobile.com</string>
+  <string>@sms.mycricket.com</string>
+  <string>@messaging.sprintpcs.com</string>
+  <string>@tmomail.net</string>
+  <string>@email.uscc.net</string>
+  <string>@vtext.com</string>
+  <string>@vmobl.com</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection carriers {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["carriers"]));
+            }
+            set {
+                this["carriers"] = value;
             }
         }
     }

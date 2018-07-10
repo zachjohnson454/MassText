@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtSender = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 30);
+            this.label2.Location = new System.Drawing.Point(299, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 6;
@@ -102,7 +103,7 @@
             // txtSubject
             // 
             this.txtSubject.Location = new System.Drawing.Point(61, 31);
-            this.txtSubject.MaxLength = 10;
+            this.txtSubject.MaxLength = 40;
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(185, 20);
             this.txtSubject.TabIndex = 9;
@@ -128,20 +129,20 @@
             // txtMessage
             // 
             this.txtMessage.Location = new System.Drawing.Point(61, 59);
-            this.txtMessage.MaxLength = 30;
+            this.txtMessage.MaxLength = 200;
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(358, 31);
+            this.txtMessage.Size = new System.Drawing.Size(358, 43);
             this.txtMessage.TabIndex = 11;
             // 
             // btnSend
             // 
             this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSend.Location = new System.Drawing.Point(464, 624);
+            this.btnSend.Location = new System.Drawing.Point(421, 624);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(118, 23);
             this.btnSend.TabIndex = 13;
-            this.btnSend.Text = "Send";
+            this.btnSend.Text = "Send Messages";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click_1);
             // 
@@ -171,31 +172,31 @@
             // createNewListToolStripMenuItem
             // 
             this.createNewListToolStripMenuItem.Name = "createNewListToolStripMenuItem";
-            this.createNewListToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.createNewListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createNewListToolStripMenuItem.Text = "&Create New List...";
             this.createNewListToolStripMenuItem.Click += new System.EventHandler(this.createNewListToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings...";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -305,30 +306,31 @@
             this.groupBox3.Controls.Add(this.txtMessage);
             this.groupBox3.Location = new System.Drawing.Point(12, 164);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(530, 108);
+            this.groupBox3.Size = new System.Drawing.Size(530, 118);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Message";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(252, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.Size = new System.Drawing.Size(87, 12);
             this.label4.TabIndex = 14;
-            this.label4.Text = "MAX 10 Characters";
+            this.label4.Text = "MAX 40 Characters";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(425, 77);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(423, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(92, 12);
             this.label3.TabIndex = 13;
-            this.label3.Text = "MAX 30 Characters";
+            this.label3.Text = "MAX 200 Characters";
             // 
             // tabPage2
             // 
@@ -347,10 +349,11 @@
             // cboList
             // 
             this.cboList.FormattingEnabled = true;
-            this.cboList.Location = new System.Drawing.Point(205, 16);
+            this.cboList.Location = new System.Drawing.Point(141, 16);
             this.cboList.Name = "cboList";
-            this.cboList.Size = new System.Drawing.Size(266, 21);
+            this.cboList.Size = new System.Drawing.Size(330, 21);
             this.cboList.TabIndex = 4;
+            this.cboList.SelectedIndexChanged += new System.EventHandler(this.cboList_SelectedIndexChanged);
             // 
             // dgvList
             // 
@@ -363,6 +366,7 @@
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvList.Location = new System.Drawing.Point(3, 52);
             this.dgvList.Name = "dgvList";
+            this.dgvList.RowHeadersVisible = false;
             this.dgvList.Size = new System.Drawing.Size(517, 237);
             this.dgvList.TabIndex = 3;
             // 
@@ -382,13 +386,14 @@
             // 
             this.phone.HeaderText = "Phone #";
             this.phone.Name = "phone";
-            this.phone.Width = 120;
+            this.phone.Width = 150;
             // 
             // carrier
             // 
             this.carrier.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.carrier.HeaderText = "Carrier";
             this.carrier.Name = "carrier";
+            this.carrier.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnBrowse
             // 
@@ -405,7 +410,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(149, 20);
+            this.label9.Location = new System.Drawing.Point(85, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 0;
@@ -433,6 +438,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "MassText";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -476,10 +482,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dgvList;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn include;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carrier;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabControl tabControl1;
@@ -489,6 +491,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMailServer;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn include;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrier;
     }
 }
 
